@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a1c49518-76ba-47cd-a5da-786aff820f13" name="服务器">
+        <fileTransfer rootFolder="/data1/pengzhen" accessType="SFTP" host="172.17.4.67" port="22" sshConfigId="310c3972-8393-4060-972b-6439fca7d442" sshConfig="pengzhen@172.17.4.67:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

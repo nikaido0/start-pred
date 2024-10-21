@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader, TensorDataset
 import estimate
 from config import sta_config
 from models.StartPred import StartPred
-from train import DataTrain, predict, CosineScheduler, feature
+from train import DataTrain, predict, CosineScheduler
 
 torch.manual_seed(20230226)
 torch.backends.cudnn.deterministic = True
@@ -174,7 +174,7 @@ def main(paths=None):
     Time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
     
-    parse_file = f"./result/sta_pares.txt"
+    parse_file = f"result/sta_pares.txt"
     file1 = open(parse_file, 'a')
     file1.write(Time)
     file1.write('\n')
@@ -278,6 +278,6 @@ def main(paths=None):
 
 if __name__ == '__main__':
 
-    models_file = f'./result/model_details.txt'
+    models_file = f'result/model_details.txt'
     args = sta_config.get_config()
     main()

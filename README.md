@@ -1,7 +1,7 @@
 # Prediction of human pathogenic start loss variants based on multi-channel features
 
 StartPred is a prediction method specifically designed to identify pathogenic start loss variants. This method leverages multi-channel features associated with the mutation's contextual sequence, capturing information of evolutionary conservation, nucleotide patterns, and epigenetic modifications. This work lays a foundation for accurately decipher the functional impact of start loss variants in the human genome.
-![Main Figure](./figs/StartPred_flowchart.png)
+![Main Figure](figstartPred_flowchart.png)
 
 ## Precomputed StartPred scores
 We have generated StartPred scores for all possible start loss variants in canonical transcripts on human hg38 which can be acessed through https://zenodo.org/records/13689721.
@@ -43,7 +43,7 @@ For more information about DanQ, see https://doi.org/10.1093/nar/gkw226 and http
 ## Quick start
 
 ### Input format
-StartPred supports variants in CSV format as input. The input file should contain at least 7 columns in the header as follows. [Sample file](./data/test.csv)
+StartPred supports variants in CSV format as input. The input file should contain at least 7 columns in the header as follows. [Sample file](dataest.csv)
 
 |  Chr  | Pos |  Ref  |  Alt  |  Label  |  Reference sequence  |  Mutated sequence  |  ...  |
 | ----- | --- | ----- | ----- | ------- | -------------------- | ------------------ | ----- |
@@ -79,9 +79,9 @@ python main.py
 ### Output format
 This program produces two output files.
 
-The first file is 'sta_test.csv' [Sample file](./result/sta_test.csv). It provides a comprehensive overview of StartPred's predictive performance on the dataset, encompassing various metrics such as recall, specificity (SPE), precision (PRE), F1-score (F1), Matthew's correlation coefficient (MCC), accuracy (ACC), the area under the receiver operating characteristic curve (AUC), and the area under the precision-recall curve (AUPR).
+The first file is 'sta_test.csv' [Sample file](resultta_test.csv). It provides a comprehensive overview of StartPred's predictive performance on the dataset, encompassing various metrics such as recall, specificity (SPE), precision (PRE), F1-score (F1), Matthew's correlation coefficient (MCC), accuracy (ACC), the area under the receiver operating characteristic curve (AUC), and the area under the precision-recall curve (AUPR).
 
-The second file is 'test_pred_score.txt' [Sample file](./result/test_pred_score.txt). It contains a list of scores assigned by StartPred to each variant in the dataset, with the sample order matching that of the input data in 'data/test.csv'. The scoring threshold for StartPred is established at 0.5, whereby variants scoring below 0.5 are designated as benign and those scoring above 0.5 are identified as pathogenic.
+The second file is 'test_pred_score.txt' [Sample file](resultest_pred_score.txt). It contains a list of scores assigned by StartPred to each variant in the dataset, with the sample order matching that of the input data in 'data/test.csv'. The scoring threshold for StartPred is established at 0.5, whereby variants scoring below 0.5 are designated as benign and those scoring above 0.5 are identified as pathogenic.
 
 ## Cite us
 ```

@@ -12,7 +12,7 @@ import torch
 from transformers import AutoModel, AutoModelForMaskedLM
 
 # 设置模型路径和多序列比对（MSA）数据路径
-model_path = './model'
+model_path = 'model'
 msa_path = './89.zarr.zip'
 
 # 读取数据

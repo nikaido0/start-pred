@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import os
 
-
+# 通用的框架，用于构建各种深度学习模型
 class BaseModel(nn.Module):
     def __init__(
             self,
@@ -90,6 +90,7 @@ class BaseModel(nn.Module):
     def validate(self, data_loader):
         self.eval()  # 设置模型为评估模式
         total_loss = 0.0
+
         with torch.no_grad():  # 不计算梯度
             for inputs, targets in data_loader:
                 outputs = self(inputs)
